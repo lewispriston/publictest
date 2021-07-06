@@ -1,0 +1,16 @@
+{
+    "name": "store-app",
+    "version": "1.0.0",
+    "description": "global store to access variety of goods online",
+    "main": "app.js",
+    "scripts": {
+        "test": "npm unittest start",
+        "start": "nodemon app.js"
+    },
+    "author": "Priston Lewis",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.9"
+    }
+}
