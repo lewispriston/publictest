@@ -5,7 +5,8 @@
     "main": "app.js",
     "scripts": {
         "test": "mocha '*test.js' ",
-        "start": "node app.js"
+        "start": "node app.js",
+        "dockerstart": "nohup node app.js"
     },
     "author": "Priston Lewis",
     "license": "ISC",
