@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Docker Run') {
             steps {
-                sh 'sudo docker run -p 3000:3000 expresser'
+                sh 'sudo nohup docker run -p 3000:3000 expresser &'
             }
         }
     }
