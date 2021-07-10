@@ -18,12 +18,12 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'sudo docker build -t express .'
+                sh 'sudo docker build -t expresser .'
             }
         }
         stage('Docker Run') {
             steps {
-                sh 'sudo docker build -d express'
+                sh 'sudo docker run -p 3000:3000 expresser'
             }
         }
     }
