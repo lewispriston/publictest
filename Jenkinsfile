@@ -18,8 +18,8 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'sudo docker kill $(sudo docker ps -q --filter ancestor=expresser )'
-                sh 'sudo docker image rm -f $(sudo docker images | grep "expresser")'
+                // sh 'sudo docker kill $(sudo docker ps -q --filter ancestor=expresser )'
+                // sh 'sudo docker image rm -f $(sudo docker images | grep "expresser")'
                 sh 'sudo docker build -t expresser .'
             }
         }
