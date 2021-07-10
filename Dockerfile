@@ -1,7 +1,7 @@
 FROM node:10.9.0
-WORKDIR /app
-COPY package.json /app
+WORKDIR /src
+COPY package.json /src
 RUN npm install
-COPY . ./app
+COPY . ./src
 EXPOSE 3000
 CMD ["npm", "start"]
