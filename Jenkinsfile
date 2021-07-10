@@ -18,13 +18,13 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
+                sh 'sudo docker kill $(sudo docker ps -q --filter ancestor=expresser )'
                 sh 'sudo docker image rm -f $(sudo docker images | grep "expresser")'
                 sh 'sudo docker build -t expresser .'
             }
         }
         stage('Docker Run') {
             steps {
-                sh 'sudo docker kill $(sudo docker ps -q --filter ancestor=expresser )'
                 sh 'sudo nohup docker run -p 3000:3000 expresser &'
             }
         }
