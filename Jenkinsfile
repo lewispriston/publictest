@@ -18,6 +18,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
+                sh 'sudo docker image rm -f $(sudo docker images | grep "expresser")'
                 sh 'sudo docker build -t expresser .'
             }
         }
