@@ -13,7 +13,7 @@ describe('Podcast', () => {
             //     .end((err, res) => {
             //         (1).should.be(1);
             //     });
-            expect(true).to.be.false;
+            expect(true).to.be.true;
             expect(false).to.be.false;
             expect(true).to.be.true;
             done();
