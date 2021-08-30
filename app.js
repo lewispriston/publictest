@@ -1,6 +1,11 @@
 const express = require('express');
-const mongoose = require("mongoose");
 
+// import { TextEncoder, TextDecoder } from 'util'
+const TextEncoder = require('util');
+const TextDecoder = require('util');
+const mongoose = require("mongoose");
+// global.TextEncoder = TextEncoder
+// global.TextDecoder = TextDecoder
 const app = express();
 app.listen(3000, function() {
     console.log('listening on port 3000');
