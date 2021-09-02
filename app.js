@@ -10,7 +10,7 @@ const app = express();
 app.listen(3000, function() {
     console.log('listening on port 3000');
 });
-mongoose.connect('mongodb://1c7d27ed2ffb:27017/usersdb', {
+mongoose.connect('mongodb://172.19.0.2:27017/usersdb', {
     useNewUrlParser: true
 });
 var glob = "hello"
