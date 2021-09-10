@@ -10,12 +10,15 @@ const app = express();
 app.listen(3000, function() {
     console.log('listening on port 3000');
 });
-// mongoose.connect('mongodb://10.0.2.15:27017/usersdb', {
-//     useNewUrlParser: true
-// });
-mongoose.connect('mongodb://127.0.0.1:27017/usersdb', {
-    useNewUrlParser: true
-});
+if (process.env.NODE_ENV) {
+    mongoose.connect('mongodb://10.0.2.15:27017/usersdb', {
+        useNewUrlParser: true
+    });
+} else {
+    mongoose.connect('mongodb://127.0.0.1:27017/usersdb', {
+        useNewUrlParser: true
+    });
+}
 var glob = "hello"
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
