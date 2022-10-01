@@ -11,7 +11,7 @@ app.listen(3000, function() {
     console.log('listening on port 3000');
 });
 if (process.env.NODE_ENV) {
-    mongoose.connect('mongodb://10.0.2.15:27017/usersdb', {
+    mongoose.connect('mongodb://127.0.0.1:27017/usersdb', {
         useNewUrlParser: true
     });
 } else {
